@@ -1,0 +1,19 @@
+// 'extend' everything within block content to 'layout.jade'
+extends layout
+
+block content
+	h1 Info Search
+	form#search-form
+		input#search(type="search",placeholder="Enter Search Item")
+		input#submit(type="submit")
+
+	br
+	hr
+	#results
+
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js")
+	script(src="/javascripts/client.js")
+
+	// 'copy and paste' handlebars-template.html
+	include handlebars-template.html
